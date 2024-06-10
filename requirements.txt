@@ -2,5 +2,4 @@ python-dotenv
 pandas
 streamlit
 numpy
-smtplib
 
