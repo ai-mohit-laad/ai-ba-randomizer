@@ -54,12 +54,14 @@ def send_email_to_crew(email, name):
     message['Subject'] = f'Testing of BA Randomizer'  
     message.attach(MIMEText(body, 'html'))
     
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.starttls()
-        server.login(smtp_username, smtp_password)
-        recipients = to_emails + cc_emails + test_emails  # Combine To and Cc recipients
-        server.sendmail(sender, recipients, message.as_string())
-        server.close()
-        print(f"[ ]     Email sent successfully to {recipients}!")
-    
+    try:
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_username, smtp_password)
+            recipients = to_emails + cc_emails + test_emails  # Combine To and Cc recipients
+            server.sendmail(sender, recipients, message.as_string())
+            server.close()
+            print(f"[ ]     Email sent successfully to {recipients}!")
+    except Exception as ex:
+        print("exception in sending mail", ex)
 
