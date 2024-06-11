@@ -3,6 +3,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 import os
+import streamlit as st
 
 load_dotenv()
 
@@ -63,5 +64,6 @@ def send_email_to_crew(email, name):
             server.close()
             print(f"[ ]     Email sent successfully to {recipients}!")
     except Exception as ex:
+        st.write(ex)
         print("exception in sending mail", ex)
 
