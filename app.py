@@ -6,6 +6,7 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 
+st.set_page_config(page_title="AI BA Randomizer", page_icon=":airplane:")
 st.image('./air_india_logo.png')
 st.title("BA Randomizer")
 
