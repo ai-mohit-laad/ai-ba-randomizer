@@ -10,7 +10,8 @@ load_dotenv()
 smtp_server = 'email-smtp.ap-south-1.amazonaws.com'
 smtp_port = 587
 smtp_username = 'AKIA6MPHRG2WGXH7S4WD'
-smtp_password = os.getenv('SES_SMTP_PASSWORD')
+smtp_password = st.secrets["SES_SMTP_PASSWORD"]
+# smtp_password = os.getenv('SES_SMTP_PASSWORD') 
 
 def send_email_to_crew(email, name):
 
