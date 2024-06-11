@@ -5,13 +5,13 @@ cookie:
 credentials:
   usernames:
     mohittest:
-      email: mohit.laad@airindia.com
+      email: 
       failed_login_attempts: 0
       logged_in: false
       name: Mohit Laad
       password: mohit123
     opstechuser:
-      email: ops.tech@airindia.com
+      email: 
       failed_login_attempts: 0
       logged_in: false
       name: Ops Tech User
